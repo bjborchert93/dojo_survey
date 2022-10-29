@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dojo Survey Result</title>
+</head>
+<body>
+    <div class="container mt-5 w-50 bg-dark text-light">
+        <h2 class="text-decoration-underline" style="color: gold;">Submitted Info</h2>
+        <div class="row">
+            <div class="mb-2 row">
+                <label class="col-6">Your Name:</label>
+                <p class="col-6">{{ session['name'] }}</p>
+            </div>
+            <div class="mb-2 row">
+                <label class="col-6">Dojo Location:</label>
+                <p class="col-6">{{ session['location'] }}</p>
+            </div>
+            <div class="mb-2 row">
+                <label class="col-6">Favorite Language:</label>
+                <p class="col-6">{{ session['fav_language'] }}</p>
+            </div>
+            <div class="mb-2 row">
+                <label class="col-6">Comments:</label>
+                <p class="col-6">{{ session['comments'] }}</p>
+            </div>
+            <a href="/">
+                <button class="btn btn-primary">Go Back</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
